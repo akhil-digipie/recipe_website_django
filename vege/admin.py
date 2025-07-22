@@ -4,4 +4,3 @@ from .models import *
 from .views import recipe
 
 admin.site.register(Recipe)
-
