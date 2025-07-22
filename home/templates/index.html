@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block start %}
+  <h1>This is index page</h1>
+
+  <table class="table" border="1" cellpadding="10">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Age</th>
+        <th>Age ≥ 30</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in peoples %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ p.Name }}</td>
+        <td>{{ p.Designation }}</td>
+        <td>{{ p.Age }}</td>
+        <td>
+        {% if p.Age >= 30 %}
+            Yes
+        {% else %}
+            No
+        {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
