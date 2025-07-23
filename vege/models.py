@@ -6,3 +6,4 @@ class Recipe(models.Model):
     recipe_name = models.CharField()
     recipe_description = models.TextField()
     recipe_image = models.ImageField()
+    recipe_view_count = models.IntegerField(default=1)
